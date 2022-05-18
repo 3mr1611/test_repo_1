@@ -8,7 +8,7 @@
 #include <avr/io.h>
 #include<util/delay.h>
 int main(void){
-DDRA=0b00001111; //PORTA0 output
+DDRB=0b00001111; //PORTA0 output
 
 while(1)//super loop
 {
@@ -16,11 +16,11 @@ while(1)//super loop
 	//_delay_ms(1000);
 	//PORTA=0; //PA0 low
 	//_delay_ms(1000);
-	PORTA=0b00000001;
+	PORTB=0b00000001;
 	for(int i=0;i<4;i++){
 
 		_delay_ms(250);
-		PORTA <<=2;
+		PORTB <<=2;
 	}
 }
 }
